@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.journal.databinding.FragmentFirstBinding
+//
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+import com.example.journal.R
+import com.example.journal.adapter.ItemAdapter
+import com.example.journal.data.Datasource
+
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
@@ -32,9 +34,14 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+
+        val myDataset = Datasource().loadAffirmations()
+//        val recyclerView = binding.recyclerView
+//        binding.recyclerView.adapter = ItemAdapter(requireContext(), myDataset)
+//        recyclerView.setHasFixedSize(true)
+//        binding.buttonFirst.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//        }
     }
 
     override fun onDestroyView() {

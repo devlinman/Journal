@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+//import androidx.navigation.fragment.findNavController
 import com.example.journal.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +30,14 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Message....", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+//        binding.fab.setOnClickListener {
+//
+//        }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
