@@ -3,7 +3,7 @@ package com.example.journal.data
 import com.example.journal.R
 import com.example.journal.task_model.Affirmation
 
-class Datasource() {
+class Datasource {
 
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
